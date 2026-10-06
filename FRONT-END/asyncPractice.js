@@ -1,15 +1,33 @@
-const numbers = [10, 20, 30, 40, 50];
+const express = require("express");
 
-console.log("Original Array:", numbers);
+const app = express();
+const PORT = 3000;
 
-const doubled = numbers.map(num => num * 2);
-console.log("Doubled:", doubled);
+// Middleware
+app.use(express.json());
 
-const greaterThan25 = numbers.filter(num => num > 25);
-console.log("Greater than 25:", greaterThan25);
+// Home route
+app.get("/", (req, res) => {
+    res.send("Node.js server is running 🚀");
+});
 
-const total = numbers.reduce((sum, num) => sum + num, 0);
-console.log("Total:", total);
+// API route
+app.get("/api/users", (req, res) => {
+    res.json([
+        {
+            id: 1,
+            name: "Mohammed",
+            role: "Developer"
+        },
+        {
+            id: 2,
+            name: "Ahmed",
+            role: "Student"
+        }
+    ]);
+});
 
-const found = numbers.find(num => num === 30);
-console.log("Found:", found);
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
