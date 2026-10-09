@@ -1,54 +1,18 @@
-const mongoose = require("mongoose");
+const http = require("http");
 
-async function main() {
+const server = http.createServer((req, res) => {
+    res.writeHead(200, {
+        "Content-Type": "text/html"
+    });
 
-    try {
-
-        await mongoose.connect(
-            "mongodb://127.0.0.1:27017/eduverse"
-        );
-
-        console.log("MongoDB connected successfully!");
-
-    } catch (error) {
-
-        console.log(
-            "MongoDB connection failed:",
-            error.message
-        );
-    }
-}
-
-main();const mysql = require("mysql2");
-
-const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "YOUR_PASSWORD",
-    database: "eduverse"
+    res.end(`
+        <h1>EduVerse AI</h1>
+        <p>Node.js server is running successfully!</p>
+    `);
 });
 
-connection.connect((error) => {
+const PORT = 5000;
 
-    if (error) {
-        console.log("MySQL connection failed:", error.message);
-        return;
-    }
-
-    console.log("MySQL connected successfully!");
+server.listen(PORT, () => {
+    console.log(`Node.js server running at http://localhost:${PORT}`);
 });
-
-// Get students
-connection.query(
-    "SELECT * FROM students",
-    (error, results) => {
-
-        if (error) {
-            console.log(error);
-            return;
-        }
-
-        console.log("Students:");
-        console.table(results);
-    }
-);
