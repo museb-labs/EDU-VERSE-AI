@@ -1248,3 +1248,6 @@ VALUES
 ('Sara', 'sara@gmail.com', 'Data Science', 20);
 
 SELECT * FROM students;
+
+
+
