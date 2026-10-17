@@ -98,3 +98,12 @@ app.post("/api/students", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Express server running at http://localhost:${PORT}`);
 });
+
+        message: "Student added successfully",
+        student: student
+    });
+});
+
+app.listen(PORT, () => {
+    console.log(`Express server running at http://localhost:${PORT}`);
+});
