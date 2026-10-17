@@ -16,3 +16,9 @@ const PORT = 5000;
 server.listen(PORT, () => {
     console.log(`Node.js server running at http://localhost:${PORT}`);
 });
+
+
+server.listen(PORT, () => {
+    console.log(`Node.js server running at http://localhost:${PORT}`);
+});
+
