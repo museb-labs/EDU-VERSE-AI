@@ -95,3 +95,7 @@ showExpenses(expenses);
 showExpenses(expenses);
  console.log("---------------------------");
     console.log("Total Expenses: ₹" + calculateTotal(expenses));
+showExpenses(expenses);
+showExpenses(expenses);
+ console.log("---------------------------");
+    console.log("Total Expenses: ₹" + calculateTotal(expenses));
