@@ -99,3 +99,9 @@ showExpenses(expenses);
 showExpenses(expenses);
  console.log("---------------------------");
     console.log("Total Expenses: ₹" + calculateTotal(expenses));
+const expenses = [
+    { name: "Food", amount: 250 },
+    { name: "Travel", amount: 120 },
+    { name: "Books", amount: 500 },
+    { name: "Internet", amount: 800 }
+];
