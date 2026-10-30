@@ -370,3 +370,4 @@ const expenses = [
     { name: "Books", amount: 500 },
     { name: "Internet", amount: 800 }
 ];
+
